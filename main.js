@@ -137,5 +137,3 @@ function fetchWeatherData() {
       app.style.opacity = "1";
     });
 }
-fetchWeatherData();
-app.style.opacity = "1";
