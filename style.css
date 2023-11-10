@@ -162,6 +162,9 @@ h3 {
     width: 100%;
     top: initial;
   }
+  .city-time {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 500px) {
   html {
@@ -169,6 +172,13 @@ h3 {
   }
   .container {
     align-items: center;
+  }
+  .weather img {
+    display: block;
+    margin: 0;
+  }
+  .city-time {
+    text-align: center;
   }
 }
 @media screen and (max-height: 300px) {
