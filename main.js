@@ -12,6 +12,7 @@ const form = document.getElementById("locationInput");
 const search = document.querySelector(".search");
 const btn = document.querySelector(".submit");
 const cities = document.querySelectorAll(".cities");
+// const mapContainer = document.getElementById("map");
 
 let cityInput = "London";
 cities.forEach((city) => {
@@ -45,6 +46,21 @@ function dayOfTheWeek(day, month, year) {
   ];
   return weekday[new Date(`${day}/${month}/${year}`).getDay()];
 }
+
+// function initMap(lat, lon) {
+//   // Initialize the map centered at the provided latitude and longitude
+//   const map = new google.maps.Map(mapContainer, {
+//     center: { lat, lng: lon },
+//     zoom: 10, // You can adjust the zoom level
+//   });
+
+//   // Add a marker at the specified location
+//   const marker = new google.maps.Marker({
+//     position: { lat, lng: lon },
+//     map,
+//     title: "Weather Location",
+//   });
+// }
 function fetchWeatherData() {
   fetch(
     `https://api.weatherapi.com/v1/current.json?key=9290c933ca064965a1e143855231011&q=${cityInput}`
@@ -130,6 +146,10 @@ function fetchWeatherData() {
           btn.style.background = "#1b1b1b";
         }
       }
+
+      //   const latitude = data.location.lat;
+      //   const longitude = data.location.lon;
+      //   initMap(latitude, longitude);
       app.style.opacity = "1";
     })
     .catch(() => {
