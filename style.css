@@ -51,6 +51,9 @@ h3 {
 .temp,
 .weather {
   margin: 0 1em;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
 .city-time h1 {
   margin: 0;
